@@ -7,9 +7,8 @@ const connectDB = async () => {
     const connectionString = process.env.DATABASE_URL;
 
     sql = postgres(connectionString, {
-      ssl: { rejectUnauthorized: false },
-      host: connectionString.split("@")[1].split(":")[0], // force host from connection string
-      family: 4 // IPv4
+      ssl: { rejectUnauthorized: false }, // required by Supabase
+      family: 4 // force IPv4
     });
 
     await sql`SELECT NOW()`;
