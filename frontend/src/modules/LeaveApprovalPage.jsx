@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Check, X, Filter, Calendar, FileText } from 'lucide-react';
 
 // Centralize API URL
-const API_BASE_URL = 'http://localhost:3000/api/leaves/admin';
+const API_BASE_URL = 'https://digiwings.onrender.com/api/leaves/admin';
 
 const LeaveApprovalPage = () => {
     const [leaveRequests, setLeaveRequests] = useState([]);

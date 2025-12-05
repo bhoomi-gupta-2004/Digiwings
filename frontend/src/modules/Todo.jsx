@@ -2,12 +2,12 @@ import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 
 // API
-const API_URL = 'http://localhost:3000/api/tasks';
+const API_URL = 'https://digiwings.onrender.com/api/tasks';
 
 // Create a reusable axios instance with the Authorization header
 // This assumes the token is stored in localStorage after a successful login.
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'https://digiwings.onrender.com/api',
 });
 
 // Use an interceptor to add the token to every request

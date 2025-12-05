@@ -46,7 +46,7 @@ const EmployeeDashboard = () => {
 
             try {
                 // Fetch user data from /api/me
-                const response = await fetch("http://localhost:3000/api/me", {
+                const response = await fetch("https://digiwings.onrender.com/api/me", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

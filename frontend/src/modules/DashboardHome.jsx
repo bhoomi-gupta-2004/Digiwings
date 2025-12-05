@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Plus, Edit3, Trash2, Filter, Download, Mail, Phone, MapPin, Calendar, Building, IndianRupee } from 'lucide-react';
 
 // Corrected API URL to match the likely backend routing
-const API_URL = 'http://localhost:3000/api/admin';
+const API_URL = 'https://digiwings.onrender.com/api/admin';
 
 // Define Modal component OUTSIDE of the main component function
 const Modal = ({ isOpen, onClose, title, children }) => {
@@ -117,7 +117,7 @@ const DashboardHome = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/admin', {
+            const response = await fetch('https://digiwings.onrender.com/api/admin', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,

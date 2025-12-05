@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, MinusCircle, UserCheck } from 'lucide-react';
 
-const API_URL = 'http://localhost:3000/api/admin/attendance/dashboard/today';
+const API_URL = 'https://digiwings.onrender.com/api/admin/attendance/dashboard/today';
 
 const AdminAttendanceDashboard = () => {
     const [attendanceData, setAttendanceData] = useState([]);

@@ -16,7 +16,7 @@ const LoginPage = () => {
     const [loading, setLoading] = useState(false);
 
     // This should point to your backend login endpoint
-    const BACKEND_URL = "http://localhost:3000/api/auth/login"
+    const BACKEND_URL = "https://digiwings.onrender.com/api/auth/login"
 
     const handleLogin = async (e) => {
         e.preventDefault();

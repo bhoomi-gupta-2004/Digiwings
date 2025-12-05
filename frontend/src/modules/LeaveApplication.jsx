@@ -25,7 +25,7 @@ const LeaveApplication = () => {
             const token = localStorage.getItem("token"); 
 
             const res = await axios.post(
-                "http://localhost:3000/api/leaves/apply",
+                "https://digiwings.onrender.com/api/leaves/apply",
                 formData,
                 {
                     headers: {

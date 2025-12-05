@@ -13,7 +13,7 @@ const Attendance = () => {
 
   const navigate = useNavigate();
   const today = new Date().toISOString().split("T")[0];
-  const API_BASE_URL = "http://localhost:3000/api/attendance"; // Centralized URL
+  const API_BASE_URL = "https://digiwings.onrender.com/api/attendance"; // Centralized URL
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
