@@ -7,7 +7,9 @@ const connectDB = async () => {
     const connectionString = process.env.DATABASE_URL;
 
     sql = postgres(connectionString, {
-      ssl: "require"
+      ssl: {
+        rejectUnauthorized: false // important for Supabase on cloud
+      }
     });
 
     await sql`SELECT NOW()`;
@@ -16,6 +18,7 @@ const connectDB = async () => {
     return sql;
   } catch (err) {
     console.error("Database connection error:", err);
+    process.exit(1); // optional: stop server if DB fails
   }
 };
 
