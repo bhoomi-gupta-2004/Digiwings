@@ -1,0 +1,24 @@
+const postgres = require("postgres");
+
+let sql; // shared db instance
+
+const connectDB = async () => {
+  try {
+    const connectionString = process.env.DATABASE_URL;
+
+    sql = postgres(connectionString, {
+      ssl: "require"
+    });
+
+    await sql`SELECT NOW()`;
+    console.log("Database connected");
+
+    return sql;
+  } catch (err) {
+    console.error("Database connection error:", err);
+  }
+};
+
+const getDB = () => sql;
+
+module.exports = { connectDB, getDB };
